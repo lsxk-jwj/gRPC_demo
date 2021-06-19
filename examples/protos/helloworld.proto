@@ -22,10 +22,21 @@ option objc_class_prefix = "HLW";
 package helloworld;
 
 // The greeting service definition.
+/*
+proto中的service的名字将会被自动设置为一个class；而service中的rpc方法就会成为这个class里的虚函数。
+*/
 service Greeter {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
+  // Sends another greeting. be added
+  rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
 }
+
+
+/*
+每个message都会被编译器生成一个类，message里的每个字段都会提供访问方法如name() set_name(),字段的名字可以随意设置！
+如Hellorequest和HelloReply都会成为一个类，类中有name() set_name() message() set_message()方法，以在server(返回参数)和client（传入参数）文件中使用
+*/
 
 // The request message containing the user's name.
 message HelloRequest {
@@ -35,4 +46,22 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+}
+
+
+
+service MyGreeter {
+  // Sends a greeting
+  rpc twoSum (MyRequest) returns (MyReply) {}
+}
+
+// The request message containing the user's name.
+message MyRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+// The response message containing the greetings
+message MyReply {
+  int32 sum = 1;
 }
