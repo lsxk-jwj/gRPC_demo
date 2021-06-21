@@ -19,6 +19,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <unistd.h>
 
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
 #include <grpcpp/grpcpp.h>
@@ -89,15 +90,16 @@ void RunServer() {
 }
 
 class MyGreeterServiceImpl final : public MyGreeter::Service {
-
   /*这里是真正的rpc call的实现！
-  1 
-  2 
+  
+
   */
   Status twoSum(ServerContext* context, const MyRequest* request,
                   MyReply* reply) override {
     int result = request->num1() + request->num2();
     reply->set_sum(result);
+
+    sleep(3);
     return Status::OK;
   }
 
@@ -127,6 +129,7 @@ void RunMyServer() {
 
 
 int main(int argc, char** argv) {
+  //RunServer();
   RunMyServer();
 
   return 0;

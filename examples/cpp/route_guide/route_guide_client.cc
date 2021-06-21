@@ -79,7 +79,7 @@ class RouteGuideClient {
 
   void GetFeature() {
     Point point;
-    Feature feature;
+    Feature feature;//作为值结果参数！
     point = MakePoint(409146138, -746188906);
     GetOneFeature(point, &feature);
     point = MakePoint(0, 0);
@@ -186,6 +186,8 @@ class RouteGuideClient {
   }
 
  private:
+
+  //形参都是使用指针类型，传递的实参则是一个普通对象的地址，即&feature
   bool GetOneFeature(const Point& point, Feature* feature) {
     ClientContext context;
     Status status = stub_->GetFeature(&context, point, feature);
@@ -209,6 +211,7 @@ class RouteGuideClient {
     return true;
   }
 
+  //类内的const对象可以直接初始化！
   const float kCoordFactor_ = 10000000.0;
   std::unique_ptr<RouteGuide::Stub> stub_;
   std::vector<Feature> feature_list_;
@@ -216,6 +219,7 @@ class RouteGuideClient {
 
 int main(int argc, char** argv) {
   // Expect only arg: --db_path=path/to/route_guide_db.json.
+  // 如--db_path=/home/mycode/github/grpc_demo/grpc/examples/cpp/route_guide/route_guide_db.json
   std::string db = routeguide::GetDbFileContent(argc, argv);
   RouteGuideClient guide(
       grpc::CreateChannel("localhost:50051",

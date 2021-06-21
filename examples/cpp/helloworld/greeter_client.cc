@@ -104,7 +104,7 @@ class MyGreeterClient {
 
   // Assembles the client's payload, sends it and presents the response back
   // from the server.
-  //
+  // 这个函数是又封装了一层，所以它的接口和名字都无所谓的！
   int twoSum(const int& num1, const int& num2) {
     // Data we are sending to the server.
     MyRequest request;

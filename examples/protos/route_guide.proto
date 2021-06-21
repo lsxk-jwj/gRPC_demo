@@ -32,7 +32,8 @@ service RouteGuide {
   rpc GetFeature(Point) returns (Feature) {}
 
   // A server-to-client streaming RPC.
-  //
+  // 就是返回值是一个数组或者其他形式的流！
+
   // Obtains the Features available within the given Rectangle.  Results are
   // streamed rather than returned at once (e.g. in a response message with a
   // repeated field), as the rectangle may cover a large area and contain a
@@ -40,7 +41,7 @@ service RouteGuide {
   rpc ListFeatures(Rectangle) returns (stream Feature) {}
 
   // A client-to-server streaming RPC.
-  //
+  // 
   // Accepts a stream of Points on a route being traversed, returning a
   // RouteSummary when traversal is completed.
   rpc RecordRoute(stream Point) returns (RouteSummary) {}

@@ -83,12 +83,18 @@ std::string GetFeatureName(const Point& point,
   return "";
 }
 
+//service RouteGuide 具体实现成为此类
 class RouteGuideImpl final : public RouteGuide::Service {
  public:
   explicit RouteGuideImpl(const std::string& db) {
+    //调用这个函数去初始化feature_list_
     routeguide::ParseDb(db, &feature_list_);
   }
 
+  /*
+  所有服务方法都可以（并且将会！）同时从多个线程中调用。您必须确保您的方法实现是线程安全的。
+  feature_list_构造后永远不会更改，因此设计上是安全的
+  */
   Status GetFeature(ServerContext* context, const Point* point,
                     Feature* feature) override {
     feature->set_name(GetFeatureName(*point, feature_list_));
@@ -96,6 +102,9 @@ class RouteGuideImpl final : public RouteGuide::Service {
     return Status::OK;
   }
 
+  /*
+  server端的流式对象，将proto里rpc ListFeatures 里的stream Feature 转换成 ServerWriter<Feature>
+  */
   Status ListFeatures(ServerContext* context,
                       const routeguide::Rectangle* rectangle,
                       ServerWriter<Feature>* writer) override {
@@ -177,11 +186,13 @@ void RunServer(const std::string& db_path) {
   builder.RegisterService(&service);
   std::unique_ptr<Server> server(builder.BuildAndStart());
   std::cout << "Server listening on " << server_address << std::endl;
+  //服务器在此进行阻塞等待
   server->Wait();
 }
 
 int main(int argc, char** argv) {
-  // Expect only arg: --db_path=path/to/route_guide_db.json.
+  // Expect only arg: --db_path=path/to/route_guide_db.json. 也就是这个json包的文件路径！
+  //如--db_path=/home/mycode/github/grpc_demo/grpc/examples/cpp/route_guide/route_guide_db.json
   std::string db = routeguide::GetDbFileContent(argc, argv);
   RunServer(db);
 
