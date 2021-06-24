@@ -1,0 +1,72 @@
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:2 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:3 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:4 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:7 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:8 has logged in the lobby
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has created the new room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has created the new room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:2 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:3 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:4 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:2 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:3 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:4 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] All the Players in the room:1 has been ready, the match begins at once.
+[2021-06-23 21:16:31.253] [Lobby_log] [warning] Player:5 is not in room with the status of not ready, can not choose the PlayerReady.
+[2021-06-23 21:16:31.253] [Lobby_log] [info] The match in the room:1 has been finished
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has joined in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:2 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:3 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:4 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] All the Players in the room:1 has been ready, the match begins at once.
+[2021-06-23 21:16:31.253] [Lobby_log] [info] The match in the room:1 has been finished
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:1 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:2 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:3 has been ready in the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:4 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:5 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:6 has left out of the room:1
+[2021-06-23 21:16:31.253] [Lobby_log] [info] All the Players in the room:1 has been ready, the match begins at once.
+[2021-06-23 21:16:31.253] [Lobby_log] [info] The match in the room:1 has been finished
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:7 has joined in the room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:8 has created the new room:3
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:8 has joined in the room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:8 has been ready in the room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:7 has been ready in the room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] All the Players in the room:2 has been ready, the match begins at once.
+[2021-06-23 21:16:31.253] [Lobby_log] [info] The match in the room:2 has been finished
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:8 has left out of the room:2
+[2021-06-23 21:16:31.253] [Lobby_log] [info] Player:7 has left out of the room:2
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:8 has created the new room:4
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:1 is starting.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:1 has joined in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:1 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:1 is finished.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:4 is starting.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:4 has joined in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:4 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:4 is finished.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:7 is starting.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:7 has joined in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:7 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:7 is finished.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:8 is starting.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:8 has joined in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:8 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Quickmatch for player:8 is finished.
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:2 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] Player:3 has been ready in the room:1
+[2021-06-23 21:16:31.254] [Lobby_log] [info] All the Players in the room:1 has been ready, the match begins at once.

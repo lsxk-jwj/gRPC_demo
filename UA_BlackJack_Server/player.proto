@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package player;
+
+service PlayerService {
+    rpc SignUp (Request) returns (Response) {}
+}
+
+service DatabaseService{
+    rpc RequestDB(Request) returns (Response) {}
+}
+
+message Request {
+    enum RequestType {
+        INVAL = 0;   
+        // forward to lobby 
+        LOGIN = 1; 
+        LOGOUT = 2; 
+        ROOM_LIST = 3;
+        JOIN_ROOM = 4;
+        CREATE_ROOM = 5;
+        QUICK_MATCH = 6;
+        READY = 7;
+        // forward to room
+        LEAVE_ROOM = 8;
+        BET = 9;
+        HIT = 10;
+        STAND = 11;
+        DOUBLE = 12;
+        SURRENDER = 13;
+        // forward to social
+        SIGNUP = 14;
+        INFO = 15;  
+        RANK_ME = 16;
+        RANK_TOP = 17;  
+        ADD_FRIEND = 18;
+        ACCEPT_FRIEND = 19;
+        DELETE_FRIEND = 20;
+        LIST_FRIEND = 21;
+        LIST_MATCH = 22;
+        LIST_WAITTING = 23;
+        // forward to proxy
+        NOTIFY_USER = 24;
+        // forward to database
+        GET_NAME = 25;
+        GET_UID = 26;
+        GET_PASSWORD = 27;
+        GET_SCORE = 28;
+        GET_MATCH_INFO = 29;
+        MATCH_END = 30;
+        ADD_WAIT_FRIEND = 31;
+        DELETE_WAIT_FRIEND = 32;
+    }
+    optional RequestType requestType = 1;
+    optional int64  uid = 2;
+    optional int64 stamp = 3;
+    repeated string args = 4;
+}
+
+message Response {
+    optional int64 status = 1;
+    optional int64  uid = 2;
+    optional int64 stamp = 3;
+    repeated string args = 4;
+}
